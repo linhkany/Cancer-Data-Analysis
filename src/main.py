@@ -201,5 +201,9 @@ print(cancer.target_names) # ça envoie une liste: ['malignant' 'benign'], une l
 print(cancer.target[:10])  #  affiche les 10 premiers  diagnostics, codés sous forme 0 et 1. 
 print(df["diagnostic"])   # affiche toute la colonne diagnostic
 
-
+# df["colonne"].unique() => afficher toutes les valeurs différentes d'une colonne
+df["diagnostic"].unique() # envoie [0 1]; la colonne diagnostic ne contient que deux valeurs : 0 et 1.
+df["diagnostic"].value_counts() # compter le nombre de fois ou chaque valeur apparaît: 1    357 ; 0    212 => Il y a 357 patients bénins et 212 patients malins.
+df.sort_values("mean radius") # mettre les données dans l'ordre (trier) croissant
+df.sort_values("mean radius", ascending=False) # mettre les données dans l'ordre (trier) décroissant
 
