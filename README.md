@@ -88,6 +88,63 @@ J'ai réalisé mon premier petit programme interactif capable de :
 - Premier `git push`
 - Mise en place d'un fichier `.gitignore`
 
+### ✅ Jour 5 : Pandas - Premières analyses de données
+
+- Installation de Pandas
+- Découverte du DataFrame
+- Chargement du dataset Breast Cancer
+- Exploration des données
+- Statistiques descriptives
+- Manipulation des colonnes
+- Filtrage des données
+- Tri des données
+
+**Commandes étudiées :**
+
+- `head()`
+- `tail()`
+- `shape`
+- `columns`
+- `info()`
+- `describe()`
+- `mean()`
+- `median()`
+- `std()`
+- `min()`
+- `max()`
+- `sum()`
+- `unique()`
+- `value_counts()`
+- `sort_values()`
+- Filtrage avec des conditions
+
+**Documentation réalisée :**
+
+- Création de `Python.md`
+- Création de `Pandas.md`
+- Création de `ScikitLearn.md`
+- Création de `SQL.md`
+- Création de `Concepts.md`
+- Création de `Ressources.md`
+
+**Projet :**
+
+- Organisation du dossier `docs`
+- Amélioration de la structure du projet
+- Mise à jour du dépôt GitHub
+
+**Compétences acquises :**
+
+✅ Manipuler un DataFrame
+
+✅ Explorer un jeu de données
+
+✅ Calculer des statistiques descriptives
+
+✅ Filtrer et trier les données
+
+✅ Documenter un projet Python
+
 ---
 
 ## 📅 À venir
@@ -102,3 +159,5 @@ J'ai réalisé mon premier petit programme interactif capable de :
 - Visual Studio Code
 - Git
 - GitHub
+
+

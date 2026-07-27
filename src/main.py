@@ -155,3 +155,51 @@ print(est_majeur(5))
 print(est_mineur(17))
 
 print(malins_patients(patients))
+
+# Jour 5
+# Découverte de Pandas et premier dataset médical
+
+from sklearn.datasets import load_breast_cancer
+# Importe la fonction permettant de charger le dataset Breast Cancer
+# depuis la bibliothèque scikit-learn.
+ 
+import pandas as pd                            
+#import => raccourci, pandas devient pd pour que ce soit pratique
+# Importe la bibliothèque Pandas sous le raccourci "pd".
+# Ce raccourci est utilisé par tous les développeurs Python.
+
+cancer = load_breast_cancer() # stockage dans "cancer", comme une boîte à plusieurs compartiments.
+# Charge le dataset en mémoire.
+# La variable "cancer" contient les données, les noms des colonnes,
+# les diagnostics et d'autres informations.
+
+df = pd.DataFrame(cancer.data, columns=cancer.feature_names) # "df" commande est une table entière, un peu comme un tableaue excel.
+# Crée un DataFrame Pandas à partir des données du dataset.
+# cancer.data contient toutes les valeurs numériques.
+# cancer.feature_names fournit les noms des colonnes.
+
+df["diagnostic"] = cancer.target
+# Ajoute une nouvelle colonne "diagnostic".
+# cancer.target contient le diagnostic de chaque patient :
+# 0 = malin (Malignant)
+# 1 = bénin (Benign)
+
+print(df.head())
+# Affiche les 5 premières lignes du DataFrame.
+# Un DataFrame est une grande table de données,
+# comparable à une feuille Excel.
+# Chaque ligne représente un patient.
+# Chaque colonne représente une caractéristique médicale.
+
+print(df.shape) # shape est la forme, elle renvoie combien y a de lignes et de colonnes. Elle renvoie (nombre_de_lignes, nombre_de_colonnes), shape n'est pas une fonction.
+print(df.columns) # envoie le nom de toutes les colonnes 
+df["area error"] # donne moi uniquement la colonne area error
+print(df["area error"]) # affiche toute la colonne area error
+print(df.info())        # affiche les informations générales du DataFrame: nombre de lignes et colonnes, type de chaque colonne, nombre de valeurs non nulles, mémoire utilisée.
+print(df.describe())    # affiche les statistiques descriptives sur chaque colonne: count, moyenne, std (écart-type), min, max, quartiles
+print(cancer.target_names) # ça envoie une liste: ['malignant' 'benign'], une liste commence à 0 donc target = 0  → malignant, target = 1  → benign
+print(cancer.target[:10])  #  affiche les 10 premiers  diagnostics, codés sous forme 0 et 1. 
+print(df["diagnostic"])   # affiche toute la colonne diagnostic
+
+
+
