@@ -145,6 +145,50 @@ J'ai réalisé mon premier petit programme interactif capable de :
 
 ✅ Documenter un projet Python
 
+## 📅 Jour 6 – Manipulation et filtrage des données avec Pandas
+
+### 🎯 Objectifs
+- Comprendre la différence entre une **Series** et un **DataFrame**.
+- Sélectionner des lignes et des colonnes.
+- Filtrer les données selon une ou plusieurs conditions.
+- Trier les résultats.
+- Manipuler les données comme un Data Analyst.
+
+### 📚 Notions étudiées
+- `loc[]`
+- `iloc[]`
+- Sélection d'une ou plusieurs colonnes
+- Filtrage avec :
+  - `==`
+  - `!=`
+  - `>`
+  - `<`
+  - `>=`
+  - `<=`
+- Combinaison de conditions avec :
+  - `&` (ET)
+  - `|` (OU)
+- `sort_values()`
+- Tri par ordre croissant et décroissant (`ascending=True` / `ascending=False`)
+- Chaînage de plusieurs commandes Pandas
+
+### 💻 Exercices réalisés
+- Affichage d'une ou plusieurs colonnes d'un DataFrame.
+- Sélection de lignes avec `loc` et `iloc`.
+- Filtrage des tumeurs bénignes et malignes.
+- Utilisation de plusieurs conditions avec les opérateurs `&` et `|`.
+- Tri des données selon différentes caractéristiques (`mean radius`, `mean area`...).
+- Résolution d'une mission simulant une demande d'un médecin pour identifier des patientes répondant à des critères précis.
+
+### ✅ Compétences acquises
+À la fin de cette journée, je suis capable de :
+- Comprendre la différence entre une **Series** et un **DataFrame**.
+- Sélectionner efficacement des lignes et des colonnes.
+- Filtrer un jeu de données avec des conditions simples ou multiples.
+- Trier les données afin de faciliter leur analyse.
+- Enchaîner plusieurs opérations Pandas dans une même commande.
+- Traduire une problématique métier en requête Pandas.
+
 ---
 
 ## 📅 À venir

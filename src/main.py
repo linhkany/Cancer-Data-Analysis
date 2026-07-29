@@ -206,4 +206,49 @@ df["diagnostic"].unique() # envoie [0 1]; la colonne diagnostic ne contient que 
 df["diagnostic"].value_counts() # compter le nombre de fois ou chaque valeur apparaît: 1    357 ; 0    212 => Il y a 357 patients bénins et 212 patients malins.
 df.sort_values("mean radius") # mettre les données dans l'ordre (trier) croissant
 df.sort_values("mean radius", ascending=False) # mettre les données dans l'ordre (trier) décroissant
+df[["diagnostic", "mean radius", "area error"]] # sélectionner plusieurs colonnes, faut pas oublier double crochet pour plusieurs colonnes
+df[["diagnostic", "area error"]].head() # afficher les premières lignes de plusieurs colonnes avec la commande la fonction head()
+df.loc[0] # sélectionner la première ligne avec loc 
+df.loc[0:4] # afficher de la première ligne jusqu'à la ligne 4 
+df.iloc[:, 2] # afficher les lignes de la colonne position 2
 
+# Jour 6
+# Exercice 
+print(df["mean texture"]) # afficher uniquement la colonne mean texture.
+print(df[["mean radius", "mean texture", "diagnostic"]]) # afficher les colonnes mean radius, mean texture et target.
+print(df.loc[0:9]) # affiche les 10 premières lignes
+print(df.loc[0:4, ["mean radius", "diagnostic"]]) # afficher les 5 premières lignes avec seulement les colonnes mean radius et target.
+print(df[df["diagnostic"] == 0]) # affiche les lignes tel que la valeur de la colonne diagnostic vaut 0
+
+# FILTRER LES DONNEES
+print(df[df["diagnostic"] == 1]) # affiche uniquement les tumeurs bénignes
+print(df[df["diagnostic"] != 0]) # affiche uniquement les tumeurs bénignes / différent de malignes
+print(df[df["mean radius"] > 20]) # affiche les patients dont le rayon moyen est supérieur à 20
+
+# Exercice bilan
+
+# 🔍 Question 1 : Le médecin veut voir uniquement le rayon moyen, la texture moyenne et le diagnostic de toutes les patientes.
+print(df[["mean radius", "mean texture", "diagnostic"]])
+
+# 🔍 Question 2: Le médecin pense que les tumeurs ayant un rayon moyen supérieur à 20 sont plus préoccupantes. Afficher ces patientes
+print(df[df["mean radius"] > 20]) 
+
+# 🔍 Question 3: Le médecin veut étudier les tumeurs malignes qui ont aussi une texture moyenne supérieure à 25. Affiche-les.
+print(df[(df["diagnostic"] == 0) & (df["mean texture"] > 25)])
+
+# 🔍 Question 4: Le médecin veut retrouver les patientes qui présentent au moins un de ces critères : tumeur maligne ; rayon moyen supérieur à 25. Affiche-les.
+print(df[(df["diagnostic"] == 0) | (df["mean radius"] > 25)])
+
+# PETIT DEFI ANALYSE
+# Mission: Trouver les patientes prioritaires
+
+print(df.loc[0:9, ["mean radius", "mean texture", "mean area", "diagnostic"]])
+print(df["mean radius"] > 18)
+print(df[df["mean radius"] > 18].sort_values(by = "mean radius", ascending=False))
+
+print(df.sort_values(by = "mean area", ascending=False).loc[0:4])
+
+df[(df["diagnostic"] == 0) | (df["mean area"] > 1200)][["diagnostic", "mean radius","mean texture", "mean area"]].sort_values(by = "mean radius", ascending =  False )
+
+df[(df["mean radius"] > 22) & (df["mean texture"] > 30)][["diagnostic", "mean radius","mean texture", "mean area"]].sort_values(by = "mean area", ascending = False)
+# envoie Empty DataFrame => Ça signifie simplement que dans ce dataset, aucune patiente ne vérifie ces deux conditions en même temps.
