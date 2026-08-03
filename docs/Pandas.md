@@ -330,6 +330,132 @@ Filtre les tumeurs malignes puis les trie par surface décroissante.
 
 ---
 
+### Fonctions groupby() et agg()
+groupby() permet de regrouper les mêmes éléments dans une colonne et en créer un groupe. 
+agg() permet de demander plusieurs statistiques d'un coup.
+
+```python
+print(df.groupby("diagnostic")["mean radius"].agg(["mean", "min", "max"]))
+```
+
+# Jour 7 - Analyse statistique avec Pandas
+
+## Compter les valeurs
+
+### value_counts()
+
+Compte le nombre d'occurrences de chaque valeur.
+
+```python
+df["diagnostic"].value_counts()
+```
+
+---
+
+### count()
+
+Compte le nombre de valeurs non nulles.
+
+```python
+df.count()
+```
+
+---
+
+## groupby()
+
+Permet de regrouper les données selon une colonne.
+
+```python
+df.groupby("diagnostic")
+```
+
+Créer deux groupes :
+
+- diagnostic = 0
+- diagnostic = 1
+
+`groupby()` ne réalise aucun calcul. Il prépare simplement les groupes.
+
+---
+
+## Calculer une moyenne
+
+```python
+df.groupby("diagnostic")["mean radius"].mean()
+```
+
+Calcule la moyenne du rayon moyen pour chaque diagnostic.
+
+---
+
+## Autres statistiques
+
+### Minimum
+
+```python
+df.groupby("diagnostic")["mean radius"].min()
+```
+
+---
+
+### Maximum
+
+```python
+df.groupby("diagnostic")["mean radius"].max()
+```
+
+---
+
+### Médiane
+
+```python
+df.groupby("diagnostic")["mean radius"].median()
+```
+
+---
+
+### Écart-type
+
+```python
+df.groupby("diagnostic")["mean radius"].std()
+```
+
+---
+
+## agg()
+
+Permet de calculer plusieurs statistiques en une seule commande.
+
+```python
+df.groupby("diagnostic")["mean radius"].agg(
+    ["mean", "median", "min", "max", "std"]
+)
+```
+
+---
+
+## Plusieurs colonnes
+
+```python
+df.groupby("diagnostic")[
+    ["mean radius", "mean texture", "mean area"]
+].mean()
+```
+
+---
+
+## À retenir
+
+- `groupby()` sépare les données en groupes.
+- `mean()` calcule une moyenne.
+- `median()` calcule une médiane.
+- `min()` retourne la plus petite valeur.
+- `max()` retourne la plus grande valeur.
+- `std()` calcule l'écart-type.
+- `agg()` permet de regrouper plusieurs statistiques dans une seule commande.
+- L'analyse statistique permet de comparer différents groupes de données et d'en tirer des conclusions.
+
 ## À retenir
 
 - `[]` : sélectionner des colonnes.

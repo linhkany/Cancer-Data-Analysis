@@ -191,6 +191,45 @@ J'ai réalisé mon premier petit programme interactif capable de :
 
 ---
 
+## 📅 Jour 7 – Analyse statistique avec Pandas
+
+### 🎯 Objectifs
+- Comprendre le principe de `groupby()`.
+- Calculer des statistiques descriptives.
+- Comparer les tumeurs bénignes et malignes.
+- Commencer à interpréter les résultats.
+- Répondre à des problématiques de Data Analyst.
+
+### 📚 Notions étudiées
+- `groupby()`
+- `count()`
+- `value_counts()`
+- `mean()`
+- `median()`
+- `min()`
+- `max()`
+- `std()`
+- `agg()`
+- Analyse statistique par groupe
+- Interprétation des résultats
+
+### 💻 Exercices réalisés
+- Comptage du nombre de patientes par diagnostic.
+- Calcul des moyennes de plusieurs caractéristiques par diagnostic.
+- Comparaison des rayons, textures et surfaces moyennes.
+- Utilisation de `agg()` pour obtenir plusieurs statistiques en une seule commande.
+- Recherche des patientes répondant à différents critères médicaux.
+- Première mission d'analyse simulant une étude réalisée pour un laboratoire.
+
+### ✅ Compétences acquises
+À la fin de cette journée, je suis capable de :
+- Regrouper des données avec `groupby()`.
+- Calculer des statistiques descriptives.
+- Comparer plusieurs groupes de données.
+- Utiliser `agg()` pour résumer efficacement un dataset.
+- Interpréter les résultats d'une analyse statistique.
+- Répondre à des questions métier à partir des données.
+
 ## 📅 À venir
 
 

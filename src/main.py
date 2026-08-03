@@ -252,3 +252,23 @@ df[(df["diagnostic"] == 0) | (df["mean area"] > 1200)][["diagnostic", "mean radi
 
 df[(df["mean radius"] > 22) & (df["mean texture"] > 30)][["diagnostic", "mean radius","mean texture", "mean area"]].sort_values(by = "mean area", ascending = False)
 # envoie Empty DataFrame => Ça signifie simplement que dans ce dataset, aucune patiente ne vérifie ces deux conditions en même temps.
+
+#Jour 7
+# Analyse et statistiques avec Pandas
+
+print(df.shape) # envoie (569, 31) qui veut dire 569 patients (lignes) et 31 colonnes.
+print(df["diagnostic"].value_counts()) # envoie le nombre de fois que le numéro 1 et 0 apparaît dans la colonne "diagnostic", compter les patients bénins et malins.
+
+print(df.count()) # compte les valeurs non nulles dans chaque colonne. Pemret de savoir si il y a une valeur manquante. Affiche le nombre de valeurs présentes dans chaque colonne.
+
+print(df.groupby("diagnostic")) # groupby est une fonction qui prépare les groupes sans faire de 'if' 
+print(df.groupby("diagnostic").mean()) # pour chaque groupe (0 ou 1), calcule les moyennes.
+print(df.groupby("diagnostic")["mean radius"].mean()) # pour chaque groupe de "diagnostic", garde seulement la colonne "mean radius" et calcule la moyenne.
+
+print(df.groupby("diagnostic")["mean area"].min())
+print(df.groupby("diagnostic")["mean radius"].median())
+print(df.groupby("diagnoctic")["mean perimeter"].std())
+
+# La fonction agg permet de demander plusieurs statistiques d'un coup
+print(df["mean area"].agg(["mean", "median", "std"]))
+print(df.groupby("diagnostic")[["mean radius", "mean texture", "mean area"]].mean())
