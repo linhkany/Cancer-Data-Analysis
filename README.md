@@ -230,6 +230,46 @@ J'ai réalisé mon premier petit programme interactif capable de :
 - Interpréter les résultats d'une analyse statistique.
 - Répondre à des questions métier à partir des données.
 
+## 📅 Jour 8 – Visualisation des données avec Matplotlib
+
+### 🎯 Objectifs
+- Découvrir Matplotlib.
+- Comprendre les principaux types de graphiques.
+- Visualiser les données du dataset Breast Cancer Wisconsin.
+- Interpréter les graphiques comme un Data Analyst.
+
+### 📚 Notions étudiées
+- `plt.hist()`
+- `plt.bar()`
+- `plt.scatter()`
+- `plt.boxplot()`
+- `plt.title()`
+- `plt.xlabel()`
+- `plt.ylabel()`
+- `plt.grid()`
+- `plt.legend()`
+- `plt.xticks()`
+- `plt.savefig()`
+- `alpha`
+- `bins`
+- `edgecolor`
+
+### 📊 Graphiques réalisés
+- Histogramme du rayon moyen
+- Histogramme de la surface moyenne
+- Diagramme en barres des diagnostics
+- Scatter plot : rayon moyen vs surface moyenne
+- Boxplot : comparaison du rayon moyen selon le diagnostic
+
+### 💻 Compétences acquises
+À la fin de cette journée, je suis capable de :
+- Choisir le graphique adapté à une question d'analyse.
+- Personnaliser un graphique avec un titre, des axes et une grille.
+- Comparer deux groupes à l'aide d'un boxplot.
+- Étudier la relation entre deux variables grâce à un scatter plot.
+- Sauvegarder des graphiques pour les intégrer dans un rapport.
+- Interpréter les résultats d'une visualisation de données.
+
 ## 📅 À venir
 
 
