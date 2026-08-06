@@ -97,3 +97,11 @@ Créer des graphiques.
 🤖 Scikit-Learn
 
 Construire et entraîner le modèle de Machine Learning.
+
+### Machine Learning
+La différence entre machine learning et le code normal est: Pour le code normal, on connaît la règle et on écrit la condition nous même.
+Pour le machine learning, on ne connaît pas la règle, et à partir des exemples et des données le modèle cherche lui même une règle qui sépare ce qu'on veut prédire (dans notre projet tumeurs malignes et bénignes).
+
+Features: Les informations d'entrée, nos colonnes avec les caractéristiques du tumeur.
+Target: Ce qu'on veut prédire, maligne ou bénigne.
+

@@ -270,6 +270,44 @@ J'ai réalisé mon premier petit programme interactif capable de :
 - Sauvegarder des graphiques pour les intégrer dans un rapport.
 - Interpréter les résultats d'une visualisation de données.
 
+## 📅 Jour 9 – Introduction au Machine Learning
+
+### 🎯 Objectifs
+- Comprendre les bases du Machine Learning.
+- Préparer les données pour un modèle.
+- Entraîner un premier modèle de classification.
+- Prédire le diagnostic d'une tumeur.
+- Évaluer les performances du modèle.
+
+### 📚 Notions étudiées
+- Features (`X`)
+- Target (`y`)
+- `train_test_split()`
+- `StandardScaler()`
+- `LogisticRegression()`
+- `fit()`
+- `predict()`
+- `accuracy_score()`
+- `confusion_matrix()`
+- `classification_report()`
+
+### 🤖 Étapes réalisées
+- Séparation des variables explicatives et de la variable cible.
+- Découpage du dataset en jeu d'entraînement et jeu de test.
+- Standardisation des données.
+- Entraînement d'un modèle de régression logistique.
+- Réalisation de prédictions sur les données de test.
+- Évaluation des performances du modèle.
+
+### 📈 Compétences acquises
+À la fin de cette journée, je suis capable de :
+- Préparer un dataset pour le Machine Learning.
+- Comprendre la différence entre entraînement et test.
+- Construire un premier modèle de classification.
+- Effectuer des prédictions sur de nouvelles données.
+- Évaluer un modèle grâce à plusieurs métriques.
+- Interpréter les performances d'un modèle de Machine Learning.
+
 ## 📅 À venir
 
 
